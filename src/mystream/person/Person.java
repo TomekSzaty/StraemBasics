@@ -12,6 +12,7 @@ public final class Person {
         theList.add("Asia Barberra");
         theList.add("Mark Twain");
         theList.add("Rocky Balboa");
+        theList.add("Mr. T");
         theList.add("Mathilda Fogg");
         theList.add("Garry Moore");
         theList.add("Corrine Foster");

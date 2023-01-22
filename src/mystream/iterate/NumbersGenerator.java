@@ -14,6 +14,6 @@ public final class NumbersGenerator {
         Stream.iterate(1, n -> n + 1)
                 .limit(max)
                 .filter(n -> n % 2 != 0)
-                .forEach(System.out::println);
+                .forEach(n -> System.out.print(n +" | "));
     }
 }
