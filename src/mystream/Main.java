@@ -35,8 +35,16 @@ public class Main {
         System.out.println("Numbers book before 1969 year: " + resultBookMap.size());
 
         resultBookMap.entrySet().stream()
-                .map(x -> x.getValue().getPublishYear() + " : " + x.getValue().getTitle())
+                .map(x -> x.getValue().getPublishYear() + " : " +
+                        x.getValue().getTitle() + " : " + x.getValue().getId())
                 .forEach(x -> System.out.println("|| " + x + " ||"));
+
+        String resultStatment = bookDirectory.getBookList().stream()
+                .filter(book -> book.getAuthor().startsWith("T"))
+                .map(Book::toString)
+                .collect(Collectors.joining("|||", "***", "***"));
+
+        System.out.println(resultStatment);
 
     }
 }
